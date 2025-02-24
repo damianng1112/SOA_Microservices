@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<laptop xmlns="http://www.laptops.org"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.laptops.org laptop.xsd">
+    <manufacturer>
+        <name>Dell</name>
+        <country>Poland</country>
+        <continent>Europe</continent>
+    </manufacturer>
+
+    <model>Inspiron</model>
+    <memory>512M</memory>
+    <disk>60G</disk>
+    <screen>15inch</screen>
+    <accessories>Bag</accessories>
+    <accessories>Mouse</accessories>
+</laptop>
