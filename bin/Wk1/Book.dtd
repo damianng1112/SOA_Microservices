@@ -1,6 +1,0 @@
-<!ELEMENT bookstore ( book+ ) >
-<!ELEMENT book ( title, chapter+, price ) >
-<!ELEMENT chapter ( number, title ) >
-<!ELEMENT title ( #PCDATA ) >
-<!ELEMENT number ( #PCDATA ) >
-<!ELEMENT price ( #PCDATA ) >

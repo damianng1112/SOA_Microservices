@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Product Management</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side: Product List -->
+        <div class="left-panel">
+            <h1>Products</h1>
+            <button onclick="refreshProducts()">Refresh Products</button>
+            <p id="status"></p>
+            <p id="etag"></p>
+            <table id="productTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                        <th>Category (Description)</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <!-- Right Side: Forms -->
+        <div class="right-panel">
+            <!-- Add Product Form -->
+            <div id="addForm" class="form-container">
+                <h2>Add Product</h2>
+                <form onsubmit="addProduct(event)">
+                    <label>Name: <input type="text" id="addName" required></label><br>
+                    <label>Price: <input type="number" id="addPrice" step="0.01" required></label><br>
+                    <label>Category: <select id="addCategory" required></select></label><br>
+                    <button type="submit">Add</button>
+                </form>
+                <p id="addStatus">Status: Waiting...</p>
+            </div>
+
+            <!-- Edit Product Form -->
+            <div id="editForm" class="form-container">
+                <h2>Edit Product</h2>
+                <form onsubmit="updateProduct(event)">
+                    <input type="hidden" id="editId">
+                    <label>Name: <input type="text" id="editName" required></label><br>
+                    <label>Price: <input type="number" id="editPrice" step="0.01" required></label><br>
+                    <label>Category: <select id="editCategory" required></select></label><br>
+                    <button type="submit">Update</button>
+                    <button type="button" onclick="hideEditForm()">Cancel</button>
+                </form>
+                <p id="editStatus">Status: Waiting...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
